@@ -6,11 +6,17 @@ import React, {
   HTMLProps
 } from 'react';
 
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 import DataTable from 'react-data-table-component';
 import exportFromJSON from 'export-from-json';
 import { Button } from 'react-bootstrap';
 
 import DataTablePagination from '../Pagination/DataTablePagination';
+import TextField from '@mui/material/TextField';
 
 // export file component
 const Export = ({ data }) => {
@@ -148,28 +154,33 @@ const DataTableComponent: React.FC<DataTableProps> = ({
     <div className="data-table-wrapper">
       <div className="data-table-top">
         <div className="data-table-search">
-          <input
+          <TextField
             className="form-control"
-            placeholder="Search by name"
-            type="text"
+            id="outlined-basic"
+            label="Search by name"
+            variant="outlined"
+            type="search"
             onChange={(e) => setSearchText(e.target.value)}
           />
         </div>
         <div className="data-table-action-wrap">
           {actions && <Export data={data} />}
           <div className="data-table-select">
-            <select
-              className="form-select"
-              onChange={(e) => setShowItemPerPage(Number(e.target.value))}
-              value={showItemPerPage}
-            >
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-              <option value="25">25</option>
-            </select>
-            <span className="text">Per page</span>
+            <FormControl sx={{ m: 1, minWidth: 80 }}>
+              <InputLabel id="demo-simple-select-label">Per Page</InputLabel>
+              <Select
+                displayEmpty
+                value={showItemPerPage}
+                onChange={(e) => setShowItemPerPage(Number(e.target.value))}
+                inputProps={{ 'aria-label': 'Without label' }}
+              >
+                <MenuItem value={5}>5</MenuItem>
+                <MenuItem value={10}>10</MenuItem>
+                <MenuItem value={15}>15</MenuItem>
+                <MenuItem value={20}>20</MenuItem>
+                <MenuItem value={25}>25</MenuItem>
+              </Select>
+            </FormControl>
           </div>
         </div>
       </div>

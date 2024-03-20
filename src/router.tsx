@@ -7,7 +7,7 @@ import BaseLayout from 'src/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
 import NewsListPage from './pages/NewsList';
-import NewsAddPage from './pages/NewsAdd';
+import NewsAddPage from './pages/NewsAdd/NewsAdd';
 
 const Loader = (Component) => (props) =>
   (

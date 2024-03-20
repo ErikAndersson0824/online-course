@@ -16,23 +16,11 @@ import Footer from 'src/components/Footer';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import { pink } from '@mui/material/colors';
-import Checkbox from '@mui/material/Checkbox';
-
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
-import VolumeDown from '@mui/icons-material/VolumeDown';
-import VolumeUp from '@mui/icons-material/VolumeUp';
-
-import Switch from '@mui/material/Switch';
-
+import Quill from 'src/components/Form/Quill/Quill';
+import FileUpload from 'src/components/Form/FileUpload';
+import Button from '@mui/material/Button';
+import { Margin } from '@mui/icons-material';
+import { mt } from 'date-fns/locale';
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 const currencies = [
@@ -87,386 +75,102 @@ function Forms() {
         >
           <Grid item xs={12}>
             <Card>
-              <CardHeader title="Input Fields" />
-              <Divider />
               <CardContent>
                 <Box
                   component="form"
                   sx={{
-                    '& .MuiTextField-root': { m: 1, width: '25ch' }
+                    '& .MuiTextField-root': { width: '100%', mb: 5 },
+                    '& .ql-container': { mb: 5 }
                   }}
                   noValidate
                   autoComplete="off"
                 >
                   <div>
+                    <CardHeader title="News Title(English)" />
                     <TextField
-                      required
-                      id="outlined-required"
-                      label="Required"
-                      defaultValue="Hello World"
-                    />
-                    <TextField
-                      disabled
-                      id="outlined-disabled"
-                      label="Disabled"
-                      defaultValue="Hello World"
-                    />
-                    <TextField
-                      id="outlined-password-input"
-                      label="Password"
-                      type="password"
-                      autoComplete="current-password"
-                    />
-                    <TextField
-                      id="outlined-read-only-input"
-                      label="Read Only"
-                      defaultValue="Hello World"
-                      InputProps={{
-                        readOnly: true
-                      }}
-                    />
-                    <TextField
-                      id="outlined-number"
-                      label="Number"
-                      type="number"
-                      InputLabelProps={{
-                        shrink: true
-                      }}
-                    />
-                    <TextField
-                      id="outlined-search"
-                      label="Search field"
+                      fullWidth
+                      id="news-title"
+                      label="Enter News Title"
                       type="search"
                     />
-                    <TextField
-                      id="outlined-helperText"
-                      label="Helper text"
-                      defaultValue="Default Value"
-                      helperText="Some important text"
-                    />
                   </div>
                   <div>
+                    <CardHeader title="Short Description (English)" />
                     <TextField
-                      required
-                      id="filled-required"
-                      label="Required"
-                      defaultValue="Hello World"
-                      variant="filled"
-                    />
-                    <TextField
-                      disabled
-                      id="filled-disabled"
-                      label="Disabled"
-                      defaultValue="Hello World"
-                      variant="filled"
-                    />
-                    <TextField
-                      id="filled-password-input"
-                      label="Password"
-                      type="password"
-                      autoComplete="current-password"
-                      variant="filled"
-                    />
-                    <TextField
-                      id="filled-read-only-input"
-                      label="Read Only"
-                      defaultValue="Hello World"
-                      InputProps={{
-                        readOnly: true
-                      }}
-                      variant="filled"
-                    />
-                    <TextField
-                      id="filled-number"
-                      label="Number"
-                      type="number"
-                      InputLabelProps={{
-                        shrink: true
-                      }}
-                      variant="filled"
-                    />
-                    <TextField
-                      id="filled-search"
-                      label="Search field"
+                      fullWidth
+                      id="news-title"
+                      label="Enter Short Description"
                       type="search"
-                      variant="filled"
-                    />
-                    <TextField
-                      id="filled-helperText"
-                      label="Helper text"
-                      defaultValue="Default Value"
-                      helperText="Some important text"
-                      variant="filled"
                     />
                   </div>
                   <div>
+                    <CardHeader title="Content (English)" />
+                    <Quill placeholderValue="Hello world!" />
+                  </div>
+                  <div>
+                    <CardHeader title="Search For Slug (English)" />
                     <TextField
-                      required
-                      id="standard-required"
-                      label="Required"
-                      defaultValue="Hello World"
-                      variant="standard"
-                    />
-                    <TextField
-                      disabled
-                      id="standard-disabled"
-                      label="Disabled"
-                      defaultValue="Hello World"
-                      variant="standard"
-                    />
-                    <TextField
-                      id="standard-password-input"
-                      label="Password"
-                      type="password"
-                      autoComplete="current-password"
-                      variant="standard"
-                    />
-                    <TextField
-                      id="standard-read-only-input"
-                      label="Read Only"
-                      defaultValue="Hello World"
-                      InputProps={{
-                        readOnly: true
-                      }}
-                      variant="standard"
-                    />
-                    <TextField
-                      id="standard-number"
-                      label="Number"
-                      type="number"
-                      InputLabelProps={{
-                        shrink: true
-                      }}
-                      variant="standard"
-                    />
-                    <TextField
-                      id="standard-search"
-                      label="Search field"
+                      fullWidth
+                      id="news-title"
+                      label="Enter Sly"
                       type="search"
-                      variant="standard"
                     />
-                    <TextField
-                      id="standard-helperText"
-                      label="Helper text"
-                      defaultValue="Default Value"
-                      helperText="Some important text"
-                      variant="standard"
-                    />
-                  </div>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title="Select Inputs" />
-              <Divider />
-              <CardContent>
-                <Box
-                  component="form"
-                  sx={{
-                    '& .MuiTextField-root': { m: 1, width: '25ch' }
-                  }}
-                  noValidate
-                  autoComplete="off"
-                >
-                  <div>
-                    <TextField
-                      id="outlined-select-currency"
-                      select
-                      label="Select"
-                      value={currency}
-                      onChange={handleChange}
-                      helperText="Please select your currency"
-                    >
-                      {currencies.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      id="outlined-select-currency-native"
-                      select
-                      label="Native select"
-                      value={currency}
-                      onChange={handleChange}
-                      SelectProps={{
-                        native: true
-                      }}
-                      helperText="Please select your currency"
-                    >
-                      {currencies.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField>
                   </div>
                   <div>
+                    <CardHeader title="News Title (Swedish)" />
                     <TextField
-                      id="filled-select-currency"
-                      select
-                      label="Select"
-                      value={currency}
-                      onChange={handleChange}
-                      helperText="Please select your currency"
-                      variant="filled"
-                    >
-                      {currencies.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      id="filled-select-currency-native"
-                      select
-                      label="Native select"
-                      value={currency}
-                      onChange={handleChange}
-                      SelectProps={{
-                        native: true
-                      }}
-                      helperText="Please select your currency"
-                      variant="filled"
-                    >
-                      {currencies.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField>
+                      fullWidth
+                      id="news-title"
+                      label="Enter News Title"
+                      type="search"
+                    />
                   </div>
                   <div>
+                    <CardHeader title="Short Description (Swedish)" />
                     <TextField
-                      id="standard-select-currency"
-                      select
-                      label="Select"
-                      value={currency}
-                      onChange={handleChange}
-                      helperText="Please select your currency"
-                      variant="standard"
-                    >
-                      {currencies.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      id="standard-select-currency-native"
-                      select
-                      label="Native select"
-                      value={currency}
-                      onChange={handleChange}
-                      SelectProps={{
-                        native: true
-                      }}
-                      helperText="Please select your currency"
-                      variant="standard"
-                    >
-                      {currencies.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField>
+                      fullWidth
+                      id="news-title"
+                      label="Enter Short Description"
+                      type="search"
+                    />
                   </div>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title="Switches" />
-              <Divider />
-              <CardContent>
-                <Switch {...label} defaultChecked />
-                <Switch {...label} />
-                <Switch {...label} disabled defaultChecked />
-                <Switch {...label} disabled />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title="Checkboxes &amp; Radios" />
-              <Divider />
-              <CardContent>
-                <Checkbox {...label} defaultChecked />
-                <Checkbox {...label} defaultChecked color="secondary" />
-                <Checkbox {...label} defaultChecked color="success" />
-                <Checkbox {...label} defaultChecked color="default" />
-                <Checkbox
-                  {...label}
-                  defaultChecked
-                  sx={{
-                    color: pink[800],
-                    '&.Mui-checked': {
-                      color: pink[600]
-                    }
-                  }}
-                />
-                <Divider sx={{ my: 5 }} />
-                <FormControl component="fieldset">
-                  <FormLabel component="legend">Gender</FormLabel>
-                  <RadioGroup
-                    row
-                    aria-label="gender"
-                    name="row-radio-buttons-group"
-                  >
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio />}
-                      label="Female"
+                  <div>
+                    <CardHeader title="Content (Swedish)" />
+                    <Quill placeholderValue="Hello world!" />
+                  </div>
+                  <div>
+                    <CardHeader title="Search For Slug (Swedish)" />
+                    <TextField
+                      fullWidth
+                      id="news-title"
+                      label="Enter Sly"
+                      type="search"
                     />
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio />}
-                      label="Male"
-                    />
-                    <FormControlLabel
-                      value="other"
-                      control={<Radio />}
-                      label="Other"
-                    />
-                    <FormControlLabel
-                      value="disabled"
-                      disabled
-                      control={<Radio />}
-                      label="other"
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title="Sliders" />
-              <Divider />
-              <CardContent>
-                <Box sx={{ width: 200 }}>
-                  <Stack
-                    spacing={2}
-                    direction="row"
-                    sx={{ mb: 1 }}
-                    alignItems="center"
-                  >
-                    <VolumeDown />
-                    <Slider
-                      aria-label="Volume"
-                      value={value}
-                      onChange={handleChange2}
-                    />
-                    <VolumeUp />
-                  </Stack>
-                  <Slider
-                    disabled
-                    defaultValue={30}
-                    aria-label="Disabled slider"
-                  />
+                  </div>
+                  <div>
+                    <CardHeader title="Picture" />
+                    <div
+                      style={{ border: '1px solid grey', borderRadius: '7px' }}
+                    >
+                      <FileUpload iconName="files" />
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '40px' }}>
+                    <Button
+                      sx={{ margin: '.625rem' }}
+                      variant="contained"
+                      color="success"
+                    >
+                      Save
+                    </Button>
+                    <Button
+                      sx={{ margin: '.625rem' }}
+                      variant="contained"
+                      color="primary"
+                    >
+                      Cancel
+                    </Button>
+                  </div>
                 </Box>
               </CardContent>
             </Card>
