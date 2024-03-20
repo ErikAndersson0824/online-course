@@ -81,7 +81,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Navigate to="/dashboards" replace />
+        element: <Navigate to="/news-list" replace />
       },
       {
         path: 'status',
@@ -110,17 +110,17 @@ const routes: RouteObject[] = [
       },
       {
         path: '*',
-        element: <Status404 />
+        element: <Navigate to="/news-list" replace />
       }
     ]
   },
   {
-    path: 'dashboards',
+    path: 'news-list',
     element: <SidebarLayout />,
     children: [
       {
         path: '',
-        element: <Navigate to="crypto" replace />
+        element: <Crypto />
       },
       {
         path: 'crypto',

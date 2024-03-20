@@ -337,7 +337,7 @@ const Menu: React.FC = () => {
         </MenuSub>
       </MenuItem>
       <MenuItem>
-        <MenuItemLink icon="dashboard" text="Edit Orders" to="#" />
+        <MenuItemLink icon="dashboard" text="Edit Orders" to="/home" />
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
@@ -349,7 +349,7 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="News List" to="/home" />
+            <MenuItemLink text="News List" to="/news-list" />
           </MenuItem>
           <MenuItem>
             <MenuItemLink text="Add News" to="/home-ecommerce" />
@@ -434,7 +434,7 @@ const Menu: React.FC = () => {
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
-        <MenuItemLink icon="dashboard" text="Data Courses" to="#" />
+        <MenuItemLink icon="dashboard" text="Data Courses" to="/home" />
       </MenuItem>
     </MenuList>
   );

@@ -59,7 +59,7 @@ function Sidebar() {
             <Box
               mx={2}
               sx={{
-                width: 52
+                width: 250
               }}
             >
               <Logo />
