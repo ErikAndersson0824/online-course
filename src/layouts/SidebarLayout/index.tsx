@@ -3,6 +3,7 @@ import { Box, alpha, lighten, useTheme } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
+import Header from './Header';
 
 interface SidebarLayoutProps {
   children?: ReactNode;
@@ -40,6 +41,7 @@ const SidebarLayout: FC<SidebarLayoutProps> = () => {
           }
         }}
       >
+        <Header />
         <Sidebar />
         <Box
           sx={{

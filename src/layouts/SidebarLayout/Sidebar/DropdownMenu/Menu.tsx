@@ -224,16 +224,16 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Notifications" to="/home" />
+            <MenuItemLink text="Notifications" to="/home" icon="bell" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Google Stats" to="/home-ecommerce" />
+            <MenuItemLink text="Google Stats" to="/home-ecommerce" icon="img" />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="img"
           text="Home Slideshow"
           onClick={menuToggle}
           sub
@@ -241,16 +241,20 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Slideshow List" to="/home" />
+            <MenuItemLink text="Slideshow List" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Image to Slideshow" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Add Image to Slideshow"
+              to="/home-ecommerce"
+              icon="plus"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="file"
           text="Edit Content"
           onClick={menuToggle}
           sub
@@ -258,16 +262,20 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Pages & Subpages" to="/home" />
+            <MenuItemLink text="Pages & Subpages" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Landing Page Popup" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Landing Page Popup"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="users"
           text="Edit user"
           onClick={menuToggle}
           sub
@@ -275,22 +283,30 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="User List" to="/home" />
+            <MenuItemLink text="User List" to="/home" icon="user-list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add User" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Add User"
+              to="/home-ecommerce"
+              icon="user-add"
+            />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="User Courses" to="/home" />
+            <MenuItemLink text="User Courses" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Export Email Addresses" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Export Email Addresses"
+              to="/home-ecommerce"
+              icon="download"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="mail"
           text="Edit Email Templates"
           onClick={menuToggle}
           sub
@@ -298,13 +314,13 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Admin Email Templates" to="/home" />
+            <MenuItemLink text="Admin Email Templates" to="/home" icon="mail" />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="tags"
           text="Edit Categories"
           onClick={menuToggle}
           sub
@@ -312,16 +328,20 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Category List" to="/home" />
+            <MenuItemLink text="Category List" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Category" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Add Category"
+              to="/home-ecommerce"
+              icon="plus"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="book-read"
           text="Edit Courses"
           onClick={menuToggle}
           sub
@@ -329,19 +349,19 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Courses List" to="/home" />
+            <MenuItemLink text="Courses List" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Courses" to="/home-ecommerce" />
+            <MenuItemLink text="Add Courses" to="/home-ecommerce" icon="plus" />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem>
-        <MenuItemLink icon="dashboard" text="Edit Orders" to="/home" />
+        <MenuItemLink icon="cart" text="Edit Orders" to="/home" />
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="template"
           text="Edit News"
           onClick={menuToggle}
           sub
@@ -349,16 +369,16 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="News List" to="/news-list" />
+            <MenuItemLink text="News List" to="/news/list" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add News" to="/home-ecommerce" />
+            <MenuItemLink text="Add News" to="/news/add" icon="plus" />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="question"
           text="Edit Questions & Answers"
           onClick={menuToggle}
           sub
@@ -366,19 +386,23 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Q&A List" to="/home" />
+            <MenuItemLink text="Q&A List" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Q&A" to="/home-ecommerce" />
+            <MenuItemLink text="Add Q&A" to="/home-ecommerce" icon="plus" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Q&A Type List" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Q&A Type List"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="setting"
           text="Edit Settings"
           onClick={menuToggle}
           sub
@@ -386,22 +410,34 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Settings list" to="/home" />
+            <MenuItemLink text="Settings list" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="VAT Settings" to="/home-ecommerce" />
+            <MenuItemLink
+              text="VAT Settings"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Under Maintenance" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Under Maintenance"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Master Password" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Master Password"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="setting"
           text="Edit Newsletter"
           onClick={menuToggle}
           sub
@@ -409,16 +445,20 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Newsletter List" to="/home" />
+            <MenuItemLink text="Newsletter List" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Newsletter" to="/home-ecommerce" />
+            <MenuItemLink
+              text="Add Newsletter"
+              to="/home-ecommerce"
+              icon="list"
+            />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
         <MenuItemLink
-          icon="dashboard"
+          icon="template"
           text="Edit Videos"
           onClick={menuToggle}
           sub
@@ -426,15 +466,15 @@ const Menu: React.FC = () => {
         />
         <MenuSub>
           <MenuItem>
-            <MenuItemLink text="Videos list" to="/home" />
+            <MenuItemLink text="Videos list" to="/home" icon="list" />
           </MenuItem>
           <MenuItem>
-            <MenuItemLink text="Add Video" to="/home-ecommerce" />
+            <MenuItemLink text="Add Video" to="/home-ecommerce" icon="plus" />
           </MenuItem>
         </MenuSub>
       </MenuItem>
       <MenuItem sub>
-        <MenuItemLink icon="dashboard" text="Data Courses" to="/home" />
+        <MenuItemLink icon="template" text="Data Courses" to="/home" />
       </MenuItem>
     </MenuList>
   );

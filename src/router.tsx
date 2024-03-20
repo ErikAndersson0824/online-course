@@ -6,6 +6,8 @@ import SidebarLayout from 'src/layouts/SidebarLayout';
 import BaseLayout from 'src/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
+import NewsListPage from './pages/NewsList';
+import NewsAddPage from './pages/NewsAdd';
 
 const Loader = (Component) => (props) =>
   (
@@ -110,25 +112,21 @@ const routes: RouteObject[] = [
       },
       {
         path: '*',
-        element: <Navigate to="/news-list" replace />
+        element: <Navigate to="/news/list" replace />
       }
     ]
   },
   {
-    path: 'news-list',
+    path: 'news',
     element: <SidebarLayout />,
     children: [
       {
-        path: '',
-        element: <Crypto />
+        path: 'list',
+        element: <NewsListPage />
       },
       {
-        path: 'crypto',
-        element: <Crypto />
-      },
-      {
-        path: 'messenger',
-        element: <Messenger />
+        path: 'add',
+        element: <NewsAddPage />
       }
     ]
   },
