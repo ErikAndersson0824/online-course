@@ -127,7 +127,7 @@ const DataTableComponent: React.FC<DataTableProps> = ({
   // filter items by name
   useEffect(() => {
     const filteredData = data.filter((item) =>
-      item.name.toLowerCase().includes(searchText.toLowerCase())
+      item.newsTitle.toLowerCase().includes(searchText.toLowerCase())
     );
 
     setTableData(filteredData);
