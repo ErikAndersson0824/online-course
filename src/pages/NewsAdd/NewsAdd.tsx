@@ -94,9 +94,7 @@ function Forms() {
       </Helmet>
       <PageTitleWrapper>
         <Typography variant="h3" component="h3" gutterBottom>
-          <Button variant="contained" color="primary" size="large">
-            Add News
-          </Button>
+          Add News
         </Typography>
       </PageTitleWrapper>
       <Container maxWidth="lg">

@@ -4,7 +4,7 @@ import Block from 'src/components/Block/Block';
 import DataTable from 'src/components/DataTable/DataTable';
 import { tableData } from 'src/components/DataTable/TableData';
 import Button from '@mui/material/Button';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Navigate } from 'react-router-dom';
 import Icon from 'src/components/Icon/Icon';
 import { makeStyles } from '@mui/styles';
 
@@ -70,7 +70,7 @@ function NewsList() {
       <Block>
         <Block.Head className="wide-md">
           <Block.HeadContent>
-            <NavLink to="/news/add" style={{ textDecoration: 'none' }}>
+            <NavLink to="/news-add" style={{ textDecoration: 'none' }}>
               <Button sx={{ margin: 1 }} variant="contained" color="primary">
                 Add New One
               </Button>

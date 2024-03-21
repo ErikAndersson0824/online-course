@@ -117,6 +117,10 @@ const routes: RouteObject[] = [
     ]
   },
   {
+    path: 'news-add',
+    element: <Navigate to="/news/add" replace />
+  },
+  {
     path: 'news',
     element: <SidebarLayout />,
     children: [
