@@ -37,7 +37,7 @@
         background-color: $menu-link-hover-color;
       }
       .icon {
-        color: $menu-link-hover-color;
+        // color: $menu-link-hover-color;
       }
     }
   }
@@ -83,7 +83,20 @@
           display: none;
         }
         &:hover {
+          .icon {
+            color: $menu-link-hover-color;
+          }
           color: $menu-link-hover-color;
+        }
+      }
+      &-item {
+        .active {
+          .icon {
+            color: $menu-link-hover-color;
+          }
+          > .#{$menu-class}-text {
+            color: $menu-link-hover-color;
+          }
         }
       }
       &-sub {
@@ -92,11 +105,11 @@
         border-left: 1px solid $menu-border-color;
       }
     }
-    .active {
-      > .#{$menu-class}-link {
-        color: $menu-link-hover-color;
-      }
-    }
+    // .active {
+    //   > .#{$menu-class}-link {
+    //     color: $menu-link-hover-color;
+    //   }
+    // }
   }
 
   &-toggle {
