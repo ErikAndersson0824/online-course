@@ -1,11 +1,18 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Nav } from 'react-bootstrap';
 import Block from 'src/components/Block/Block';
 import DataTable from 'src/components/DataTable/DataTable';
 import { tableData } from 'src/components/DataTable/TableData';
 import Button from '@mui/material/Button';
 import { Link, NavLink } from 'react-router-dom';
 import Icon from 'src/components/Icon/Icon';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  iconClass: {
+    color: 'black'
+  }
+});
 
 export const newsTitleColumns = [
   {
@@ -23,27 +30,36 @@ export const newsTitleColumns = [
   {
     name: 'Action',
     grow: 1,
-    cell: (row) => (
-      <div
-        style={{
-          justifyContent: 'space-between',
-          flexDirection: 'row',
-          display: 'flex',
-          width: '100%',
-          padding: '0 15px 0 25px'
-        }}
-      >
-        <div style={{ display: 'flex' }}>
-          <Icon name="check-thick"></Icon>
+    cell: (row) => {
+      const classes = useStyles();
+      return (
+        <div
+          style={{
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            display: 'flex',
+            width: '100%',
+            padding: '0 15px 0 25px'
+          }}
+        >
+          <div style={{ display: 'flex' }}>
+            <NavLink to="/news/list">
+              <Icon className={classes.iconClass} name="check-thick"></Icon>
+            </NavLink>
+          </div>
+          <div style={{ display: 'flex' }}>
+            <NavLink to="/news/list">
+              <Icon className={classes.iconClass} name="edit-alt"></Icon>
+            </NavLink>
+          </div>
+          <div style={{ display: 'flex' }}>
+            <NavLink to="/news/list">
+              <Icon className={classes.iconClass} name="file-remove"></Icon>
+            </NavLink>
+          </div>
         </div>
-        <div style={{ display: 'flex' }}>
-          <Icon name="edit-alt"></Icon>
-        </div>
-        <div style={{ display: 'flex' }}>
-          <Icon name="file-remove"></Icon>
-        </div>
-      </div>
-    ),
+      );
+    },
     sortable: false
   }
 ];
